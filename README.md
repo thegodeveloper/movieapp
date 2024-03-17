@@ -41,3 +41,7 @@ go run *.go
 cd movie/cmd
 go run *.go
 ```
+
+## References
+
+- https://developer.hashicorp.com/consul/tutorials/day-0/docker-container-agents
