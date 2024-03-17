@@ -15,6 +15,8 @@ docker run \
     consul:1.15.4 agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
 ```
 
+
+
 ## Run Consul UI
 
 - http://localhost:8500/
