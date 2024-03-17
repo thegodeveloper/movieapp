@@ -67,3 +67,9 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```shell
 protoc -I=api --go_out=. movie.proto
 ```
+
+### Structure and API Services Definitions
+
+```shell
+protoc -I=api --go_out=. --go-grpc_out=. movie.proto
+```
