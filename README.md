@@ -53,3 +53,17 @@ go run *.go --port 8093
 ## References
 
 - https://developer.hashicorp.com/consul/tutorials/day-0/docker-container-agents
+
+## Installing Go Protoc Plugins
+
+```shell
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+```
+
+## Generate the Protoc
+
+```shell
+protoc -I=api --go_out=. movie.proto
+```
