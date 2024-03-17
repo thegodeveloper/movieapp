@@ -42,6 +42,12 @@ cd movie/cmd
 go run *.go
 ```
 
+### How to start more services
+
+```shell
+go run *.go --port 8093
+```
+
 ## References
 
 - https://developer.hashicorp.com/consul/tutorials/day-0/docker-container-agents

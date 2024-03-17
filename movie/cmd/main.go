@@ -21,7 +21,7 @@ func main() {
 	var port int
 	flag.IntVar(&port, "port", 8083, "API handler port")
 	flag.Parse()
-	log.Println("Starting the movie service on port %d", port)
+	log.Printf("Starting the movie service on port %d", port)
 	registry, err := consul.NewRegistry("localhost:8500")
 	if err != nil {
 		panic(err)
@@ -45,7 +45,7 @@ func main() {
 	ctrl := movie.New(ratingGateway, metadataGateway)
 	h := httphandler.New(ctrl)
 	http.Handle("/movie", http.HandlerFunc(h.GetMovieDetails))
-	if err := http.ListenAndServe(":8083", nil); err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
 		panic(err)
 	}
 }

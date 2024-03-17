@@ -1,6 +1,6 @@
 module github.com/thegodeveloper/movieapp
 
-go 1.22
+go 1.21
 
 require github.com/hashicorp/consul/api v1.28.2
 
